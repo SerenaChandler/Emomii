@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS emomi_db;
+CREATE DATABASE emomi_db;
