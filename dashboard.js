@@ -44,7 +44,7 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 	} else if(childfeelings.value == "Proud"){
 		var optionArray = ["|","sucessful|Sucessful", "confident|Confident"];
 	} else if(childfeelings.value == "accepted"){
-		var optionArray = ["|","respected|respected", "valued|Valued"];
+		var optionArray = ["|","respected|Respected", "valued|Valued"];
 	} else if(childfeelings.value == "powerful"){
 		var optionArray = ["|","courageous|Courageous", "creative|Creative"];
 	}  else if(childfeelings.value == "peaceful"){
@@ -53,6 +53,34 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		var optionArray = ["|","sensitive|Sensitive", "intimate|Intimate"];
 	}  else if(childfeelings.value == "optimistic"){
 		var optionArray = ["|","hopeful|Hopeful", "inspired|Inspired"];
+	} else if(childfeelings.value == "lonely"){
+		var optionArray = ["|","isolated|Isolated", "abandoned|Abandoned"];
+	} else if(childfeelings.value == "vunerable"){
+		var optionArray = ["|","victimized|Victimized", "fragile|Fragile"];
+	} else if(childfeelings.value == "despair"){
+		var optionArray = ["|","heartbroken|Heartbroken", "powerless|Powerless"];
+	} else if(childfeelings.value == "guilty"){
+		var optionArray = ["|","ashamed|Ashamed", "remorseful|Remorseful"];
+	} else if(childfeelings.value == "depressed"){
+		var optionArray = ["|","empty|Empty", "inferior|Inferior"];
+	}  else if(childfeelings.value == "hurt"){
+		var optionArray = ["|","embarassed|Embarassed", "disappointed|Disappointed"];
+	}else if(childfeelings.value == "letdown"){
+		var optionArray = ["|","betrayed|Betrayed", "resentful|Resentful"];
+	}  else if(childfeelings.value == "humiliated"){
+		var optionArray = ["|","disrespected|Disrespected", "ridiculed|Ridiculed"];
+	}else if(childfeelings.value == "bitter"){
+		var optionArray = ["|","indignant|Indignant", "violated|Violated"];
+	}  else if(childfeelings.value == "mad"){
+		var optionArray = ["|","furious|Furious", "jealous|Jealous"];
+	}else if(childfeelings.value == "aggressive"){
+		var optionArray = ["|","provoked|Provoked", "hostile|Hostile"];
+	}  else if(childfeelings.value == "frustrated"){
+		var optionArray = ["|","infuriated|Infuriated", "annoyed|Annoyed"];
+	}else if(childfeelings.value == "distant"){
+		var optionArray = ["|","withdrawn|Withdrawn", "numb|Numb"];
+	}  else if(childfeelings.value == "critical"){
+		var optionArray = ["|","skeptical|Skeptical", "dismissive|Dismissive"];
 	}
 	for(var option in optionArray){
 		var pair = optionArray[option].split("|");
@@ -62,38 +90,6 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		grandchildfeelings.options.add(newOption);
 	}
 }
-
-
-// `aroused
-// cheeky
-// free
-// joyful
-// curious
-// inquisitive
-// sucessful
-// confident
-// respected
-// valued
-// courageous
-// creative
-// loving
-// thankful
-// sensitive
-// intimate
-// hopeful
-// inspired`
-
-// `isolated
-// abandoned
-// victimized
-// fragile
-// heartbroken
-// powerless
-// ashamed
-// remorseful
-// empty
-// inferior
-// `
 // `betrayed
 // resentful
 // disrespected
@@ -206,3 +202,36 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 // weak
 // rejected
 // threatened`
+
+
+// `aroused
+// cheeky
+// free
+// joyful
+// curious
+// inquisitive
+// sucessful
+// confident
+// respected
+// valued
+// courageous
+// creative
+// loving
+// thankful
+// sensitive
+// intimate
+// hopeful
+// inspired`
+
+// `isolated
+// abandoned
+// victimized
+// fragile
+// heartbroken
+// powerless
+// ashamed
+// remorseful
+// empty
+// inferior
+
+// `
