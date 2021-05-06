@@ -19,6 +19,18 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    parentMood: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    childMood: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    grandChildMood: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
