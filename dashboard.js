@@ -1,7 +1,9 @@
-function populate(parentfeelings,childfeelings){
-	var parentfeelings = document.getElementById("parentfeelings");
-	var childfeelings = document.getElementById("childfeelings");
-	childfeelings.innerHTML = "";
+var parentfeelings = document.getElementById("parentfeelings");
+var childfeelings = document.getElementById("childfeelings");
+var grandchildfeelings = document.getElementById("grandchildfeelings");
+
+function populatechildren(parentfeelings,childfeelings){
+    childfeelings.innerHTML = "";
 	if(parentfeelings.value == "Happy"){
 		var optionArray = ["|","playful|Playful","content|Content","interested|Interested", "proud|Proud", "accepted|Accepted", "powerful|Powerful", "peaceful|Peaceful", "trusting|Trusting", "optimistic|Optimistic"];
 	} else if(parentfeelings.value == "Sad"){
@@ -29,11 +31,125 @@ function populate(parentfeelings,childfeelings){
 
 
 
+function populategrandchildren(childfeelings,grandchildfeelings){
+	console.log("this is a function",grandchildfeelings)
+    grandchildfeelings.innerHTML = "";
+	if(childfeelings.value == "playful"){
+		var optionArray = ["|","aroused|Aroused","cheeky|Cheeky"];
+		console.log("you chose playful");
+	} else if(childfeelings.value == "Content"){
+		var optionArray = ["|","free|Free", "joyful|Joyful"];
+	} else if(childfeelings.value == "Interested"){
+		var optionArray = ["|","curious|Curious", "inquisitive|Inquisitive"];
+	} else if(childfeelings.value == "Proud"){
+		var optionArray = ["|","sucessful|Sucessful", "confident|Confident"];
+	} else if(childfeelings.value == "Accepted"){
+		var optionArray = ["|","respected|respected", "valued|Valued"];
+	} else if(childfeelings.value == "Powerful"){
+		var optionArray = ["|","courageous|Courageous", "creative|Creative"];
+	}  else if(childfeelings.value == "Peaceful"){
+		var optionArray = ["|","loving|Loving", "thankful|Thankful"];
+	}else if(childfeelings.value == "Trusting"){
+		var optionArray = ["|","sensitive|Sensitive", "intimate|Intimate"];
+	}  else if(childfeelings.value == "Optimistic"){
+		var optionArray = ["|","hopeful|Hopeful", "inspired|Inspired"];
+	}
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		grandchildfeelings.options.add(newOption);
+	}
+}
 
 
+// `aroused
+// cheeky
+// free
+// joyful
+// curious
+// inquisitive
+// sucessful
+// confident
+// respected
+// valued
+// courageous
+// creative
+// loving
+// thankful
+// sensitive
+// intimate
+// hopeful
+// inspired`
 
+// `isolated
+// abandoned
+// victimized
+// fragile
+// heartbroken
+// powerless
+// ashamed
+// remorseful
+// empty
+// inferior
+// `
+// `betrayed
+// resentful
+// disrespected
+// ridiculed
+// indignant
+// violated
+// furious
+// jealous
+// provoked
+// hostile
+// infuriated
+// annoyed
+// withdrawn
+// numb
+// skeptical
+// dismissive`
 
+// `shocked
+// dismayed
+// disillusioned
+// perplexed
+// astonished
+// awestruck
+// eager
+// energic`
 
+// `indifferent
+// apathetic
+// prressured
+// rushed
+// overwhelmed
+// out of control
+// sleepy
+// unfocused`
+
+// `helpless
+// frightened
+// stressed
+// worried
+// inadequate
+// inferior
+// worthless
+// insignificnt
+// excluded
+// persecuted
+// nervous
+// exposed`
+
+// `judgemental
+// embarassed
+// appalled
+// revolted
+// nauseated
+// detestable
+// horrified
+// hesitant`
 
 
 
