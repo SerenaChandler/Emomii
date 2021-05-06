@@ -42,19 +42,25 @@ function renderSignUp(){
   </form>`;
   };
 
+
+
+var data1 = 1
+
   const data = {
     labels: [
-      'Red',
-      'Blue',
-      'Yellow'
+      'Happy',
+      'Sad',
+      'Angry'
     ],
+
     datasets: [{
       label: 'My First Dataset',
-      data: [300, 50, 100],
+      data: [data1, 2, 8],
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
+        'rgb(255, 205, 86)',
+        'rgb(255,255,255)'
       ],
       hoverOffset: 4
     }]
