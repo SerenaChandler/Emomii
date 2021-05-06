@@ -529,8 +529,9 @@ select {
  height: 50px;
  font-weight: 600;
  padding:10px;
+ 
 }
-
+select:invalid { color: gray; }
 input,
 select,
 textarea,

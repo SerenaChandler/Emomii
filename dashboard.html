@@ -19,6 +19,7 @@
       <div class="form-group">
         <label class="question">Today I feel...</label><br>
         <select id="parentfeelings" name="parentfeelings" onchange="populate(this.id,childfeelings)">
+            <option value="" disabled selected hidden>Please Choose...</option>
             <option value="Happy">Happy</option>
             <option value="Sad">Sad</option>
             <option value="Angry">Angry</option>
@@ -30,6 +31,7 @@
       </div>
       <label class="question">...more specifically, I feel...</label><br>
       <select id="childfeelings" name="childfeelings"></select>
+      <option value="" disabled selected hidden>Please Choose...</option>
       <div class="form-group">
         <label for="post-entry" class="question">entry:</label>
         <textarea class="form-input" id="post-entry" name="post-entry"></textarea>
