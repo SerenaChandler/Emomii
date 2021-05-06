@@ -37,21 +37,21 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 	if(childfeelings.value == "playful"){
 		var optionArray = ["|","aroused|Aroused","cheeky|Cheeky"];
 		console.log("you chose playful");
-	} else if(childfeelings.value == "Content"){
+	} else if(childfeelings.value == "content"){
 		var optionArray = ["|","free|Free", "joyful|Joyful"];
-	} else if(childfeelings.value == "Interested"){
+	} else if(childfeelings.value == "interested"){
 		var optionArray = ["|","curious|Curious", "inquisitive|Inquisitive"];
 	} else if(childfeelings.value == "Proud"){
 		var optionArray = ["|","sucessful|Sucessful", "confident|Confident"];
-	} else if(childfeelings.value == "Accepted"){
+	} else if(childfeelings.value == "accepted"){
 		var optionArray = ["|","respected|respected", "valued|Valued"];
-	} else if(childfeelings.value == "Powerful"){
+	} else if(childfeelings.value == "powerful"){
 		var optionArray = ["|","courageous|Courageous", "creative|Creative"];
-	}  else if(childfeelings.value == "Peaceful"){
+	}  else if(childfeelings.value == "peaceful"){
 		var optionArray = ["|","loving|Loving", "thankful|Thankful"];
-	}else if(childfeelings.value == "Trusting"){
+	}else if(childfeelings.value == "trusting"){
 		var optionArray = ["|","sensitive|Sensitive", "intimate|Intimate"];
-	}  else if(childfeelings.value == "Optimistic"){
+	}  else if(childfeelings.value == "optimistic"){
 		var optionArray = ["|","hopeful|Hopeful", "inspired|Inspired"];
 	}
 	for(var option in optionArray){
