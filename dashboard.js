@@ -11,7 +11,7 @@ function populatechildren(parentfeelings,childfeelings){
 	} else if(parentfeelings.value == "Angry"){
 		var optionArray = ["|","letdown|Letdown", "humiliated|Humiliated", "bitter|Bitter", "mad|Mad", "agressive|Agressive", "frustrated|Frustrated", "distant|Distant", "critical|Critical"];
 	} else if(parentfeelings.value == "Surprised"){
-		var optionArray = ["|","startled|Startled", "confused|Confused", "confused|Confused", "amazed|Amazed", "excited|Excited"];
+		var optionArray = ["|","startled|Startled", "confused|Confused", "amazed|Amazed", "excited|Excited"];
 	} else if(parentfeelings.value == "Bad"){
 		var optionArray = ["|","bored|Bored", "busy|Busy", "stressed|Stressed", "tired|Tired"];
 	} else if(parentfeelings.value == "Fearful"){
@@ -81,6 +81,14 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		var optionArray = ["|","withdrawn|Withdrawn", "numb|Numb"];
 	}  else if(childfeelings.value == "critical"){
 		var optionArray = ["|","skeptical|Skeptical", "dismissive|Dismissive"];
+	}else if(childfeelings.value == "aggressive"){
+		var optionArray = ["|","provoked|Provoked", "hostile|Hostile"];
+	}  else if(childfeelings.value == "frustrated"){
+		var optionArray = ["|","infuriated|Infuriated", "annoyed|Annoyed"];
+	}else if(childfeelings.value == "distant"){
+		var optionArray = ["|","withdrawn|Withdrawn", "numb|Numb"];
+	}  else if(childfeelings.value == "critical"){
+		var optionArray = ["|","skeptical|Skeptical", "dismissive|Dismissive"];
 	}
 	for(var option in optionArray){
 		var pair = optionArray[option].split("|");
@@ -90,22 +98,6 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		grandchildfeelings.options.add(newOption);
 	}
 }
-// `betrayed
-// resentful
-// disrespected
-// ridiculed
-// indignant
-// violated
-// furious
-// jealous
-// provoked
-// hostile
-// infuriated
-// annoyed
-// withdrawn
-// numb
-// skeptical
-// dismissive`
 
 // `shocked
 // dismayed
@@ -235,3 +227,21 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 // inferior
 
 // `
+
+
+// `betrayed
+// resentful
+// disrespected
+// ridiculed
+// indignant
+// violated
+// furious
+// jealous
+// provoked
+// hostile
+// infuriated
+// annoyed
+// withdrawn
+// numb
+// skeptical
+// dismissive`
