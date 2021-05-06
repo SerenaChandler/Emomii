@@ -6,15 +6,15 @@ User.hasMany(Post, {
     foreignKey: "user_id",
 });
 
-User.hasMany(Mood, {
-    foreignKey: "user_id",
-    onDelete: "cascade",
-});
+// User.hasMany(Mood, {
+//     foreignKey: "user_id",
+//     onDelete: "cascade",
+// });
 
-Post.hasMany(Mood, {
-    foreignKey: "post_id",
-    onDelete: "cascade",
-});
+// Post.hasMany(Mood, {
+//     foreignKey: "post_id",
+//     onDelete: "cascade",
+// });
 
 Post.belongsTo(User, {
     foreignKey: "user_id",
