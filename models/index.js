@@ -12,7 +12,7 @@ User.hasMany(Mood, {
 });
 
 Post.hasMany(Mood, {
-    foreignKey: "entry_id",
+    foreignKey: "post_id",
     onDelete: "cascade",
 });
 
