@@ -30,7 +30,7 @@ Mood.init(
         key: "id",
       },
     },
-    entry_id: {
+    post_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
