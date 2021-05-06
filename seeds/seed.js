@@ -1,8 +1,7 @@
 const sequelize = require("../config/connection");
-const { User, Post, Mood } = require("../models");
+const { User, Post } = require("../models");
 
 const userData = require("./userData.json");
-const postData = require("./moodData.json");
 const postData = require("./postData.json");
 
 const seedDatabase = async () => {
@@ -12,6 +11,7 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+  console.log('\n----- USERS SEEDED -----\n');
 
   for (const post of postData) {
     await Post.create({
@@ -19,14 +19,7 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-
-  for (const mood of moodData) {
-    await Mood.create({
-      ...mood,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-      post_id: post[Math.floor(Math.random() * post.length)].id,
-    });
-  }
+  console.log('\n----- POSTS SEEDED -----\n');
 
   process.exit(0);
 };
