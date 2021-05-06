@@ -49,7 +49,7 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		var optionArray = ["|","courageous|Courageous", "creative|Creative"];
 	}  else if(childfeelings.value == "peaceful"){
 		var optionArray = ["|","loving|Loving", "thankful|Thankful"];
-	}else if(childfeelings.value == "trusting"){
+	} else if(childfeelings.value == "trusting"){
 		var optionArray = ["|","sensitive|Sensitive", "intimate|Intimate"];
 	}  else if(childfeelings.value == "optimistic"){
 		var optionArray = ["|","hopeful|Hopeful", "inspired|Inspired"];
@@ -65,30 +65,38 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		var optionArray = ["|","empty|Empty", "inferior|Inferior"];
 	}  else if(childfeelings.value == "hurt"){
 		var optionArray = ["|","embarassed|Embarassed", "disappointed|Disappointed"];
-	}else if(childfeelings.value == "letdown"){
+	} else if(childfeelings.value == "letdown"){
 		var optionArray = ["|","betrayed|Betrayed", "resentful|Resentful"];
 	}  else if(childfeelings.value == "humiliated"){
 		var optionArray = ["|","disrespected|Disrespected", "ridiculed|Ridiculed"];
-	}else if(childfeelings.value == "bitter"){
+	} else if(childfeelings.value == "bitter"){
 		var optionArray = ["|","indignant|Indignant", "violated|Violated"];
 	}  else if(childfeelings.value == "mad"){
 		var optionArray = ["|","furious|Furious", "jealous|Jealous"];
-	}else if(childfeelings.value == "aggressive"){
+	} else if(childfeelings.value == "aggressive"){
 		var optionArray = ["|","provoked|Provoked", "hostile|Hostile"];
 	}  else if(childfeelings.value == "frustrated"){
 		var optionArray = ["|","infuriated|Infuriated", "annoyed|Annoyed"];
-	}else if(childfeelings.value == "distant"){
+	} else if(childfeelings.value == "distant"){
 		var optionArray = ["|","withdrawn|Withdrawn", "numb|Numb"];
 	}  else if(childfeelings.value == "critical"){
 		var optionArray = ["|","skeptical|Skeptical", "dismissive|Dismissive"];
-	}else if(childfeelings.value == "aggressive"){
-		var optionArray = ["|","provoked|Provoked", "hostile|Hostile"];
-	}  else if(childfeelings.value == "frustrated"){
-		var optionArray = ["|","infuriated|Infuriated", "annoyed|Annoyed"];
-	}else if(childfeelings.value == "distant"){
-		var optionArray = ["|","withdrawn|Withdrawn", "numb|Numb"];
-	}  else if(childfeelings.value == "critical"){
-		var optionArray = ["|","skeptical|Skeptical", "dismissive|Dismissive"];
+	} else if(childfeelings.value == "startled"){
+		var optionArray = ["|","shocked|Shocked", "dismayed|Dismayed"];
+	}  else if(childfeelings.value == "confused"){
+		var optionArray = ["|","disillusioned|Dissillusioned", "perplexed|Perplexed"];
+	} else if(childfeelings.value == "amazed"){
+		var optionArray = ["|","astonished|Astonished", "awestruck|Awestruck"];
+	}  else if(childfeelings.value == "excited"){
+		var optionArray = ["|","eager|Eager", "energetic|Energetic"];
+	} else if(childfeelings.value == "bored"){
+		var optionArray = ["|","indifferent|Indifferent", "apathetic|Apathetic"];
+	}  else if(childfeelings.value == "busy"){
+		var optionArray = ["|","pressured|Pressured", "rushed|Rushed"];
+	} else if(childfeelings.value == "stressed"){
+		var optionArray = ["|","overwhelmed|Overwhelmed", "outofcontrol|Out of control"];
+	}  else if(childfeelings.value == "tired"){
+		var optionArray = ["|","sleepy|Sleepy", "unfocused|Unfocused"];
 	}
 	for(var option in optionArray){
 		var pair = optionArray[option].split("|");
@@ -98,15 +106,6 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		grandchildfeelings.options.add(newOption);
 	}
 }
-
-// `shocked
-// dismayed
-// disillusioned
-// perplexed
-// astonished
-// awestruck
-// eager
-// energic`
 
 // `indifferent
 // apathetic
@@ -245,3 +244,13 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 // numb
 // skeptical
 // dismissive`
+
+// `shocked
+// dismayed
+// disillusioned
+// perplexed
+// astonished
+// awestruck
+// eager
+// energic`
+
