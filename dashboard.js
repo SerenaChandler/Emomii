@@ -109,6 +109,14 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		var optionArray = ["|","excluded|Excluded", "persecuted|Persecuted"];
 	}  else if(childfeelings.value == "threatened"){
 		var optionArray = ["|","nervous|Nervous", "exposed|Exposed"];
+	}  else if(childfeelings.value == "disapproving"){
+		var optionArray = ["|","judgemental|Judgemental", "humiliated|Humiliated"];
+	}  else if(childfeelings.value == "disenchanted"){
+		var optionArray = ["|","appaled|Appaled", "revolted|Revolted"];
+	} else if(childfeelings.value == "awful"){
+		var optionArray = ["|","nauseated|Nauseated", "detestable|Detestable"];
+	}  else if(childfeelings.value == "repelled"){
+		var optionArray = ["|","horrified|Horrified", "hesitant|Hesitant"];
 	}
 	for(var option in optionArray){
 		var pair = optionArray[option].split("|");
@@ -118,20 +126,6 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		grandchildfeelings.options.add(newOption);
 	}
 }
-
-
-// `helpless
-// frightened
-// stressed
-// worried
-// inadequate
-// inferior
-// worthless
-// insignificnt
-// excluded
-// persecuted
-// nervous
-// exposed`
 
 // `judgemental
 // embarassed
@@ -266,3 +260,18 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 // out of control
 // sleepy
 // unfocused`
+
+
+
+// `helpless
+// frightened
+// stressed
+// worried
+// inadequate
+// inferior
+// worthless
+// insignificnt
+// excluded
+// persecuted
+// nervous
+// exposed`
