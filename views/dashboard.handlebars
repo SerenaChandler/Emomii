@@ -1,0 +1,68 @@
+<div class="container-lg navbar">
+    <table>
+        <tr>
+            <td>
+                <h5>Emomii </h5>
+            </td>
+            <td>
+                <h6>mood tracker</h6>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="row">
+    <div id="entry">
+        <p class="question">Create a new post</p>
+        <form class="form new-post-form">
+            <div class="form-group">
+                <label class="question">Today I feel...</label><br>
+                <select id="parentfeelings" name="parentfeelings"
+                    onchange="populatechildren(parentfeelings,childfeelings)">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Angry">Angry</option>
+                    <option value="Surprised">Surprised</option>
+                    <option value="Bad">Bad</option>
+                    <option value="Fearful">Fearful</option>
+                    <option value="Disgusted">Disgusted</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label class="question">...but more specifically, I feel...</label><br>
+                <select id="childfeelings" name="childfeelings"
+                    onchange="populategrandchildren(childfeelings,grandchildfeelings)">
+                    <option value="" disabled selected>Select your option</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label class="question">...because I am...</label><br>
+                <select id="grandchildfeelings" name="grandchildfeelings">
+                    <option value="" disabled selected>Select your option</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="post-entry" class="question">I feel this way because...</label>
+                <textarea class="form-input" id="post-entry" name="post-entry"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+</div>
+
+<div class="chart-container">
+    <h1>hello</h1>
+    <canvas id="myChart"></canvas>
+</div>
