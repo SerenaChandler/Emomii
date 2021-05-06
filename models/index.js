@@ -1,6 +1,6 @@
-const User = require("./User");
+const User = require("./User")
 const Mood = require("./Mood");
-const Post = require("./Post");
+const Post = require("./Post")
 
 User.hasMany(Post, {
     foreignKey: "user_id",
@@ -12,7 +12,7 @@ User.hasMany(Mood, {
 });
 
 Post.hasMany(Mood, {
-    foreignKey: "entry_id",
+    foreignKey: "post_id",
     onDelete: "cascade",
 });
 
