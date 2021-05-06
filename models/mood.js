@@ -34,7 +34,7 @@ Mood.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "entry",
+        model: "Entry",
         key: "id",
       },
     },
