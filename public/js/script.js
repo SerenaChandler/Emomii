@@ -37,7 +37,7 @@ function renderSignUp(){
       <input class="form-input" type="password" id="password-signup" />
     </div>
     <div class="form-group">
-      <button class="btn btn-primary" type="submit">signup</button>
+      <button class="btn btn-primary" type="submit" id="signupbutton" onclick="event.preventDefault(),signupFormHandler()">signup now</button>
     </div>
   </form>`;
   };
