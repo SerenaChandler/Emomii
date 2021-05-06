@@ -275,3 +275,35 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 // persecuted
 // nervous
 // exposed`
+
+var data1 = 1
+
+  const data = {
+    labels: [
+      'Happy',
+      'Sad',
+      'Angry'
+    ],
+
+    datasets: [{
+      label: 'My First Dataset',
+      data: [data1, 2, 8],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)',
+        'rgb(255,255,255)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+  const config = {
+    type: 'doughnut',
+    data: data,
+  };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
