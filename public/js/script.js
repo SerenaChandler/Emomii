@@ -37,41 +37,10 @@ function renderSignUp(){
       <input class="form-input" type="password" id="password-signup" />
     </div>
     <div class="form-group">
-      <button class="btn btn-primary" type="submit">signup</button>
+      <button class="btn btn-primary" type="submit" id="signupbutton" onclick="event.preventDefault(),signupFormHandler()">signup now</button>
     </div>
   </form>`;
   };
 
 
 
-var data1 = 1
-
-  const data = {
-    labels: [
-      'Happy',
-      'Sad',
-      'Angry'
-    ],
-
-    datasets: [{
-      label: 'My First Dataset',
-      data: [data1, 2, 8],
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(255,255,255)'
-      ],
-      hoverOffset: 4
-    }]
-  };
-
-  const config = {
-    type: 'doughnut',
-    data: data,
-  };
-
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
