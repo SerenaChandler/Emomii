@@ -97,6 +97,18 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 		var optionArray = ["|","overwhelmed|Overwhelmed", "outofcontrol|Out of control"];
 	}  else if(childfeelings.value == "tired"){
 		var optionArray = ["|","sleepy|Sleepy", "unfocused|Unfocused"];
+	} else if(childfeelings.value == "scared"){
+		var optionArray = ["|","helpless|Helpless", "frightened|Frightened"];
+	}  else if(childfeelings.value == "anxious"){
+		var optionArray = ["|","stressed|Stressed", "worried|Worried"];
+	} else if(childfeelings.value == "insecure"){
+		var optionArray = ["|","inadequate|Inadequate", "inferior|Inferior"];
+	}  else if(childfeelings.value == "weak"){
+		var optionArray = ["|","worthless|Worthless", "insignificant|Insignificant"];
+	} else if(childfeelings.value == "rejected"){
+		var optionArray = ["|","excluded|Excluded", "persecuted|Persecuted"];
+	}  else if(childfeelings.value == "threatened"){
+		var optionArray = ["|","nervous|Nervous", "exposed|Exposed"];
 	}
 	for(var option in optionArray){
 		var pair = optionArray[option].split("|");
@@ -107,14 +119,6 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 	}
 }
 
-// `indifferent
-// apathetic
-// prressured
-// rushed
-// overwhelmed
-// out of control
-// sleepy
-// unfocused`
 
 // `helpless
 // frightened
@@ -254,3 +258,11 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 // eager
 // energic`
 
+// `indifferent
+// apathetic
+// prressured
+// rushed
+// overwhelmed
+// out of control
+// sleepy
+// unfocused`
