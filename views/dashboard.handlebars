@@ -8,17 +8,17 @@
             <td>
                 <h6>mood tracker</h6>
             </td>
+            <td>
+                <h6 id="logout">logout</h6>
+            </td>
         </tr>
     </table>
-            {{#if logged_in}}
-        <a href="/dashboard">dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+
+
+    
+
+    <script src="/js/logout.js"></script>
+
 </div>
 <div class="row">
     <div id="entry">
@@ -67,7 +67,7 @@
         </form>
     </div>
     <div id="posts">
-        <h3>Recent Posts</h3>
+        {{!-- <h3>Recent Posts</h3>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Lorem sed risus ultricies tristique nulla aliquet enim tortor. Dolor magna eget est lorem. Mi
         ipsum faucibus vitae aliquet. Urna molestie at elementum eu facilisis. Nullam non nisi est sit. Varius morbi
@@ -101,15 +101,15 @@
         maecenas sed enim. Habitant morbi tristique senectus et netus et malesuada. Morbi leo urna molestie at
         elementum. Habitant morbi tristique senectus et netus et malesuada. Non curabitur gravida arcu ac tortor
         dignissim. Enim neque volutpat ac tincidunt. Diam in arcu cursus euismod quis viverra nibh cras. Integer vitae
-        justo eget magna fermentum iaculis.
+        justo eget magna fermentum iaculis. --}}
     </div>
     <div id="charts">
-        
+
         <div>
             <canvas id="myChart"></canvas>
         </div>
-    
-       
+
+
         <div>
             <canvas id="mySecondChart"></canvas>
         </div>

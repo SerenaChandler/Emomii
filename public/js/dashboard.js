@@ -248,3 +248,25 @@ function renderSecondChart(Arr) {
 }
 incrementChart("Angry");
 
+const postHandler = async (event) => {
+  event.preventDefault();
+
+  const comment = document.querySelector('#post-entry').value.trim();
+
+
+  
+    const response = await fetch('/api/posts', {
+      method: 'POST',
+      body: JSON.stringify({ parentfeelings, childfeelings, grandchildfeelings, comment }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
+    }
+  
+};
+
+var postContainer = document.getElementById("posts");

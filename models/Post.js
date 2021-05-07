@@ -7,21 +7,21 @@ Post.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
       autoIncrement: true,
     },
     date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     comment: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     parentMood: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     childMood: {
       type: DataTypes.STRING,
