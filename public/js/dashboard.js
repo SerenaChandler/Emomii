@@ -183,7 +183,7 @@ const newPost = async (event) => {
 
 
 
-var emotions = [0, 0, 0];
+var emotions = [0, 0, 0, 0, 0, 0, 0];
 function incrementChart(parentfeelings) {
   if (parentfeelings == "Happy") {
     emotions[0]++;
@@ -302,13 +302,13 @@ incrementChart("Angry");
 const postHandler = async (event) => {
   event.preventDefault();
 
-  const comment = document.querySelector('#post-entry').value.trim();
+  const entry = document.querySelector('#post-entry').value.trim();
 
 
   
     const response = await fetch('/api/posts', {
       method: 'POST',
-      body: JSON.stringify({ parentfeelings, childfeelings, grandchildfeelings, comment }),
+      body: JSON.stringify({ parentfeelings, childfeelings, grandchildfeelings, entry }),
       headers: { 'Content-Type': 'application/json' },
     });
 
