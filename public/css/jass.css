@@ -542,6 +542,12 @@ label {
   font-family: 'Lato', sans-serif;
 }
 
+
+#logout {
+text-align: right;
+align-items: flex-end;
+justify-content: right;
+}
 #logout:hover {
   cursor: pointer;
 }
