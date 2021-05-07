@@ -6,7 +6,10 @@ var curHr = today.getHours();
 
 if (curHr < 12) {
     function goodmorning() {
-        document.getElementById("greeting").innerHTML = "Good Morning";
+        const grettingEl = document.getElementById("greeting");
+        if (grettingEl) {
+          grettingEl.innerHTML = "Good Morning";
+        }
       }
 
       goodmorning()
@@ -41,6 +44,3 @@ function renderSignUp(){
     </div>
   </form>`;
   };
-
-
-
