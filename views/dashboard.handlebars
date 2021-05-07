@@ -10,6 +10,15 @@
             </td>
         </tr>
     </table>
+            {{#if logged_in}}
+        <a href="/dashboard">dashboard</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </div>
 <div class="row">
     <div id="entry">
@@ -108,5 +117,5 @@
 </div>
 
 
-
+<script src="./js/dashboard.js"></script>
 </div>
