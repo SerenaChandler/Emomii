@@ -16,6 +16,8 @@ router.get('/',  async (req, res) => {
 	}
   });
 
+
+
   router.get("/:id", async (req, res) => {
 	// find a single product by its `id`
 	// be sure to include its associated Category and Tag data
@@ -48,7 +50,7 @@ router.post('/', async (req, res) => {
 		user_id: req.session.user_id,
 	  });
 
-	  res.status(200).json(postData);
+	  res.status(200).json(newPost);
 	} catch (err) {
 	  res.status(400).json(err);
 	}

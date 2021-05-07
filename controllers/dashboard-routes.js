@@ -22,7 +22,7 @@ router.get('/', withAuth, (req, res) => {
 			user_id: req.session.user_id
 		},
 		attributes: [
-		
+		'date',
 		'parentMood',
 		'childMood',
 		'grandChildMood',
@@ -35,8 +35,7 @@ router.get('/', withAuth, (req, res) => {
 		}]
 	}).then(response => {
 		const posts = response.map(post => post.get({ plain: true })); 
-		console.log("string")
-		console.log(response)
+	
 		res.render('dashboard', { posts, loggedIn: true });
 	}).catch(err => {
 		res.status(500).json(err);
