@@ -3,18 +3,18 @@ const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/',  async (req, res) => {
-	try {
-	  const postData = await Post.findAll({
-		...req.body,
-		user_id: req.session.user_id,
-	  });
+// router.get('/',  async (req, res) => {
+// 	try {
+// 	  const postData = await Post.findAll({
+// 		...req.body,
+// 		user_id: req.session.user_id,
+// 	  });
   
-	  res.status(200).json(postData);
-	} catch (err) {
-	  res.status(400).json(err);
-	}
-  });
+// 	  res.status(200).json(postData);
+// 	} catch (err) {
+// 	  res.status(400).json(err);
+// 	}
+//   });
 
   router.get("/:id", async (req, res) => {
 	// find a single product by its `id`
@@ -36,6 +36,35 @@ router.get('/',  async (req, res) => {
 	}
   });
   
+  router.get('/', async (req, res) => {
+	try{
+	const postData = await Post.findAll({
+		where: {
+			user_id: req.session.user_id
+		},
+		attributes: [
+		'date',
+		'parentMood',
+        'childMood',
+		'grandChildMood',
+		'entry'
+		],
+		include: [{
+			model: User,
+			attributes: ['name']
+		}]
+	}) 
+	const posts = postData.map((post) => post.get({ plain: true }));
+  
+	// Pass serialized data and session flag into template
+	res.render('userpost', { 
+	  posts, 
+	  logged_in: req.session.logged_in 
+	});
+  } catch (err) {
+	res.status(500).json(err);
+  }
+});
 
 
 
