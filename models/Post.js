@@ -15,7 +15,7 @@ Post.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    comment: {
+    entry: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
