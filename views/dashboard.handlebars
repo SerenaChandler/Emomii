@@ -74,10 +74,9 @@
         
         
         {{#each posts}}
-
         {{format_date date}}
-        Today I feel {{parentMood}} and {{childMood}}, and also {{grandChildMood}}, because {{entry}}
-  
+        <br>Today I feel <strong>{{parentMood}}</strong> but more specifically, I feel <strong>{{childMood}}</strong>, because I am <strong>{{grandChildMood}}</strong>. I feel this way because {{entry}}
+  <br>
         {{/each}}
 
     </div>
