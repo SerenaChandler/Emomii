@@ -40,19 +40,20 @@ router.get('/',  async (req, res) => {
 
 
 
+
 router.post('/', async (req, res) => {
 	try {
 	  const newPost = await Post.create({
 		...req.body,
 		user_id: req.session.user_id,
 	  });
-  
-	  res.status(200).json(newPost);
 
+	  res.status(200).json(postData);
 	} catch (err) {
 	  res.status(400).json(err);
 	}
   });
+  
   
   router.put('/:id', async(req, res) => {
 	// update a category by its `id` value

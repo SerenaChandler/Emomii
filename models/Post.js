@@ -13,11 +13,8 @@ Post.init(
     },
     date: {
       type: DataTypes.DATE,
-      allowNull: true,
-    },
-    entry: {
-      type: DataTypes.TEXT,
-      allowNull: true,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     parentMood: {
       type: DataTypes.STRING,
@@ -29,6 +26,10 @@ Post.init(
     },
     grandChildMood: {
       type: DataTypes.STRING,
+      allowNull: true,
+    },
+    entry: {
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     user_id: {

@@ -132,11 +132,10 @@ function populategrandchildren(childfeelings,grandchildfeelings){
 const newPost = async (event) => {
 	event.preventDefault();
   
-	const parentMood = document.querySelector('#parentfeelings').value.trim();
-	const childMood = document.querySelector('#childfeelings').value.trim();
-	const grandChildMood = document.querySelector('#grandchildfeelings').value.trim();
-	const entry = document.querySelector('#post-entry').value.trim();
-  
+	const parentMood = parentfeelings.value.trim();
+	const childMood = childfeelings.value.trim();
+	const grandChildMood = grandchildfeelings.value.trim();
+	const entry= document.querySelector("#post-entry").value.trim();
 	if (parentMood && childMood && grandChildMood && entry) {
 	  const response = await fetch(`/api/posts`, {
 		method: 'POST',
@@ -153,6 +152,7 @@ const newPost = async (event) => {
 	  }
 	}
   };
+  
   
   const deletePost = async (event) => {
 	if (event.target.hasAttribute('data-id')) {
@@ -299,25 +299,6 @@ function renderSecondChart(Arr) {
 }
 incrementChart("Angry");
 
-const postHandler = async (event) => {
-  event.preventDefault();
 
-  const entry = document.querySelector('#post-entry').value.trim();
-
-
-  
-    const response = await fetch('/api/posts', {
-      method: 'POST',
-      body: JSON.stringify({ parentfeelings, childfeelings, grandchildfeelings, entry }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert(response.statusText);
-    }
-  
-};
 
 var postContainer = document.getElementById("posts");

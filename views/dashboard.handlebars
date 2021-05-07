@@ -8,8 +8,11 @@
             <td>
                 <h6>mood tracker</h6>
             </td>
-            <td>
-                <h6 id="logout">logout</h6>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><h6 id="logout">logout</h6>
             </td>
         </tr>
     </table>
@@ -67,12 +70,14 @@
         </form>
     </div>
     <div id="posts">
+
         
         
         {{#each posts}}
         Today I feel {{parentMood}} and {{childMood}}, and also {{grandChildMood}}, because {{entry}}
   
         {{/each}}
+
     </div>
     <div id="charts">
 
