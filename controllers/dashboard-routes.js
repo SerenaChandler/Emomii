@@ -8,8 +8,8 @@ router.get('/', withAuth, (req, res) => {
     if (req.session.loggedIn) {
 		res.redirect('dashboard');
 		return;
-	}else {
-	res.render('homepage');}
+	}
+	res.render('dashboard');
 });
 
 
