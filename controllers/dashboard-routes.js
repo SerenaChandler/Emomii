@@ -22,7 +22,7 @@ router.get('/', withAuth, (req, res) => {
 			user_id: req.session.user_id
 		},
 		attributes: [
-		
+		'date',
 		'parentMood',
 		'childMood',
 		'grandChildMood',

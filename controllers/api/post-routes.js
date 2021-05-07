@@ -77,7 +77,7 @@ router.post('/', async (req, res) => {
 		user_id: req.session.user_id,
 	  });
 
-	  res.status(200).json(postData);
+	  res.status(200).json(newPost);
 	} catch (err) {
 	  res.status(400).json(err);
 	}
