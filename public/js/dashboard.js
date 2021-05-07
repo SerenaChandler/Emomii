@@ -336,30 +336,49 @@ var emotions = [0, 0, 0];
 function incrementChart(parentfeelings) {
   if (parentfeelings == "Happy") {
     emotions[0]++;
-  } else if (parentfeelings == "sad") {
+  } else if (parentfeelings == "Sad") {
     emotions[1]++;
-  } else if (parentfeelings == "angry") {
+  } else if (parentfeelings == "Angry") {
     emotions[2]++;
+  } else if (parentfeelings == "Surprised") {
+    emotions[1]++;
+  } else if (parentfeelings == "Bad") {
+    emotions[2]++;
+  } else if (parentfeelings == "Fearful") {
+    emotions[1]++;
+  } else if (parentfeelings == "Disgusted") {
+    emotions[1]++;
   }
-
-  console.log(updatedEmotions);
+  console.log(emotions);
   renderChart(emotions);
+  renderSecondChart(emotions);
 }
 // console.log(emotions)
 
 function renderChart(Arr) {
   const data = {
-    labels: ["Happy", "Sad", "Angry"],
+    labels: [
+      "Happy",
+      "Sad",
+      "Angry",
+      "Surprised",
+      "Bad",
+      "Fearful",
+      "Disgusted",
+    ],
 
     datasets: [
       {
         label: "My First Dataset",
-        data: [Arr[0], Arr[1], Arr[2]],
+        data: [Arr[0], Arr[1], Arr[2], Arr[3], Arr[4], Arr[5], Arr[6]],
         backgroundColor: [
-          "rgb(255, 99, 132)",
+          "rgb(255, 205, 132)",
           "rgb(54, 162, 235)",
-          "rgb(255, 205, 86)",
+          "rgb(255, 25, 86)",
           "rgb(255,255,255)",
+          "rgb(54, 121, 243)",
+          "rgb(25, 250, 69)",
+          "rgb(55,25,5)",
         ],
         hoverOffset: 4,
       },
@@ -374,4 +393,57 @@ function renderChart(Arr) {
   const myChart = new Chart(document.getElementById("myChart"), config);
 }
 
-incrementChart("angry");
+function renderSecondChart(Arr) {
+  const data = {
+    labels: [
+      "Happy",
+      "Sad",
+      "Angry",
+      "Surprised",
+      "Bad",
+      "Fearful",
+      "Disgusted",
+    ],
+
+    datasets: [
+      {
+        label: "",
+        data: [Arr[0], Arr[1], Arr[2], Arr[3], Arr[4], Arr[5], Arr[6]],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
+          "rgba(255, 205, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(201, 203, 207, 0.2)",
+        ],
+        borderColor: [
+          "rgb(255, 99, 132)",
+          "rgb(255, 159, 64)",
+          "rgb(255, 205, 86)",
+          "rgb(75, 192, 192)",
+          "rgb(54, 162, 235)",
+          "rgb(153, 102, 255)",
+          "rgb(201, 203, 207)",
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const config = {
+    type: "bar",
+    data: data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  };
+
+  const myChart = new Chart(document.getElementById("mySecondChart"), config);
+}
+incrementChart("Angry");

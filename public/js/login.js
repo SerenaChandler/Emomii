@@ -42,11 +42,11 @@ console.log("this is a function")
 
 document
   .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+  // .addEventListener('submit', loginFormHandler);
 
 // document
 //   .querySelector('.signup-form')
 //   .addEventListener('submit', signupFormHandler);
 
 document.getElementById('signupbutton')
-.addEventListener('submit', signupFormHandler)
+// .addEventListener('submit', signupFormHandler)
