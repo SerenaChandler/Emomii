@@ -183,7 +183,7 @@ const newPost = async (event) => {
 
 
 
-var emotions = [0, 0, 0];
+var emotions = [0, 0, 0, 0, 0, 0, 0];
 function incrementChart(parentfeelings) {
   if (parentfeelings == "Happy") {
     emotions[0]++;

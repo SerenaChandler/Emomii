@@ -69,33 +69,14 @@ const withAuth = require('../../utils/auth');
 
 
 
-// router.post('/', async (req, res) => {
-// 	try {
-// 	  const newPost = await Post.create({
-		
-// 		id: req.body.id,
-// 	  });
-  
-// 	  res.status(200).json(newPost);
 
-// 	} catch (err) {
-// 	  res.status(400).json(err);
-// 	}
-//   });
-
-router.post('/', async(req, res) => {
-	// create a new category
+router.post('/', async (req, res) => {
 	try {
-	  const postData = await Post.create({
-		  ...req.body, user_id: req.session.user_id
-		// id: req.body.id,
-		// date: req.body.date,
-		// entry: req.body.entry,
-		// parentMood: req.body.parentMood,
-		// childMood: req.body.childMood,
-		// grandChildMood: req.body.grandChildMood
+	  const newPost = await Post.create({
+		...req.body,
+		user_id: req.session.user_id,
+	  });
 
-	});
 	  res.status(200).json(postData);
 	} catch (err) {
 	  res.status(400).json(err);

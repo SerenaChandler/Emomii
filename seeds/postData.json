@@ -1,17 +1,17 @@
 [
   {
     "date": "10/3/21",
-    "comment": "test",
+    "entry": "test",
     "parentMood": "happy"
   },
   {
     "date": "4/7/21",
-    "comment": "test2",
+    "entry": "test2",
     "parentMood": "happy"
   },
   {
     "date": "5/6/21",
-    "comment": "test3",
+    "entry": "test3",
     "parentMood": "happy"
   }
 ]
