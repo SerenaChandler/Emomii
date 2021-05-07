@@ -70,20 +70,13 @@
         </form>
     </div>
     <div id="posts">
-    {{#each posts as |post| }}
-<div class="row mb-4 post">
-  <div class="col-md-9">
-    <h2>
-      <a href="/post/{{post.id}}">{{post.title}}</a>
-    </h2>
-    <p>Written by {{post.user.name}} on {{format_date post.date_created}}</p>
-    <p>
-      {{post.entry}}
-    </p>
 
-  </div>
-</div>
-{{/each}}
+        
+        
+        {{#each posts}}
+        Today I feel {{parentMood}} and {{childMood}}, and also {{grandChildMood}}, because {{entry}}
+  
+        {{/each}}
 
     </div>
     <div id="charts">
