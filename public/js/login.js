@@ -44,16 +44,27 @@ document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+// document
+//   .querySelector('.signup-form')
+//   .addEventListener('submit', signupFormHandler);
 
-document.getElementById('signupbutton')
-.addEventListener('submit', signupFormHandler)
+const signupFormEl = document.querySelector('.signup-form');
+if (signupFormEl) {
+  signupFormEl.addEventListener('submit', signupFormHandler);
+}
+
+// document.getElementById('signupbutton')
+// .addEventListener('submit', signupFormHandler)
+
+const signupbuttonEl = document.getElementById('signupbutton');
+if (signupbuttonEl) {
+  signupbuttonEl.addEventListener('submit', signupFormHandler)
+}
 
 
 // *** Google login *** //
 // Render Google Sign-in button
+// const renderButton = () => {console.log('called renderbutton');
 function renderButton() {
   gapi.signin2.render('gSignIn', {
     'scope': 'profile email',
@@ -67,7 +78,7 @@ function renderButton() {
 }
 
 // Sign-in success callback
-function onSuccess(googleUser) {
+const onSuccess = (googleUser) => {
   gapi.client.load('oauth2', 'v2', function () {
     const request = gapi.client.oauth2.userinfo.get({
       'userId': 'me'
@@ -79,30 +90,30 @@ function onSuccess(googleUser) {
 }
 
 // Save user data to the database
-function saveUserData(userData){
-  console.log('userData',userData);
+const saveUserData = async (userData) => {
   const response = await fetch('/api/users/google', {
     method: 'POST',
-    body: { oauth_provider: 'google', oauth_uid: userData.id, email: userData.email, name: userData.name },
+    body: JSON.stringify({ userData }),
     headers: { 'Content-Type': 'application/json' },
-  });
+  }).then((response) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
     alert(response.statusText);
   }
+  });
 }
 
 // Sign-in failure callback
-function onFailure(error) {
+const onFailure = (error) => {
   alert(error);
 }
 
 // Sign out the user
-function signOut() {
+const signOut = async () => {
   const auth2 = gapi.auth2.getAuthInstance();
   auth2.signOut().then(function () {
-    const response = await fetch('/api/users/logout', {
+    const response = fetch('/api/users/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });

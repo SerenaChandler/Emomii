@@ -66,11 +66,12 @@ router.post('/logout', (req, res) => {
 // *** Google login *** //
 router.post('/google', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    let userData = await User.findOne({ where: { email: req.body.userData.email } });
     if (!userData) {
-      const userData = await User.create({
-        name: req.name,
-        email: req.email
+      userData = await User.create({
+        name: req.body.userData.name,
+        email: req.body.userData.email,
+        password: req.body.userData.id
       });
     }
     req.session.save(() => {
