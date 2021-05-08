@@ -69,7 +69,7 @@ function renderButton() {
 // Sign-in success callback
 function onSuccess(googleUser) {
   gapi.client.load('oauth2', 'v2', function () {
-    var request = gapi.client.oauth2.userinfo.get({
+    const request = gapi.client.oauth2.userinfo.get({
       'userId': 'me'
     });
     request.execute(function (response) {
@@ -83,7 +83,7 @@ function saveUserData(userData){
   console.log('userData',userData);
   const response = await fetch('/api/users/google', {
     method: 'POST',
-    body: { oauth_provider:'google', userData: JSON.stringify(userData) },
+    body: { oauth_provider: 'google', oauth_uid: userData.id, email: userData.email, name: userData.name },
     headers: { 'Content-Type': 'application/json' },
   });
   if (response.ok) {
@@ -100,7 +100,7 @@ function onFailure(error) {
 
 // Sign out the user
 function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
+  const auth2 = gapi.auth2.getAuthInstance();
   auth2.signOut().then(function () {
     const response = await fetch('/api/users/logout', {
       method: 'POST',
