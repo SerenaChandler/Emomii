@@ -217,7 +217,7 @@ const newPost = async (event) => {
     }
   }
 };
-1
+
 const deletePost = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
@@ -234,36 +234,44 @@ const deletePost = async (event) => {
   }
 };
 
+const getPostdata = async () => {
+  
+
+  fetch(`/api/posts`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var emotions = {};
+
+      for (i = 0; i < data.length; i++) {
+        var emotion = data[i].parentMood;
+
+        if (emotion in emotions) {
+          emotions[emotion]++;
+        } else {
+          emotions[emotion] = 1;
+        }
+      }
+     
+      console.log(emotions);
+      renderChart(emotions);
+      renderSecondChart(emotions);
+    });
+  
+};
+
+function updatePage(event) {
+  window.location.reload;
+  newPost(event);
+  getPostdata(event);
+}
+
+getPostdata()
+
 document.querySelector(".new-post-form").addEventListener("submit", newPost);
 
-//   document
-// 	.querySelector('.post-list')
-// 	.addEventListener('click', deletePost);
-
-var emotions = [0, 0, 0, 0, 0, 0, 0];
-function incrementChart(parentfeelings) {
-  if (parentfeelings == "Happy") {
-    emotions[0]++;
-  } else if (parentfeelings == "Sad") {
-    emotions[1]++;
-  } else if (parentfeelings == "Angry") {
-    emotions[2]++;
-  } else if (parentfeelings == "Surprised") {
-    emotions[1]++;
-  } else if (parentfeelings == "Bad") {
-    emotions[2]++;
-  } else if (parentfeelings == "Fearful") {
-    emotions[1]++;
-  } else if (parentfeelings == "Disgusted") {
-    emotions[1]++;
-  }
-  console.log(emotions);
-  renderChart(emotions);
-  renderSecondChart(emotions);
-}
-// console.log(emotions)
-
-function renderChart(Arr) {
+function renderChart(obj) {
   const data = {
     labels: [
       "Happy",
@@ -278,12 +286,20 @@ function renderChart(Arr) {
     datasets: [
       {
         label: "My First Dataset",
-        data: [Arr[0], Arr[1], Arr[2], Arr[3], Arr[4], Arr[5], Arr[6]],
+        data: [
+          obj["Happy"],
+          obj["Sad"],
+          obj["Angry"],
+          obj["Surprised"],
+          obj["Bad"],
+          obj["Fearful"],
+          obj["Disgusted"],
+        ],
         backgroundColor: [
           "rgb(255, 205, 132)",
           "rgb(54, 162, 235)",
           "rgb(255, 25, 86)",
-          "rgb(255,255,255)",
+          "rgb(255,2,255)",
           "rgb(54, 121, 243)",
           "rgb(25, 250, 69)",
           "rgb(55,25,5)",
@@ -301,7 +317,7 @@ function renderChart(Arr) {
   const myChart = new Chart(document.getElementById("myChart"), config);
 }
 
-function renderSecondChart(Arr) {
+function renderSecondChart(obj) {
   const data = {
     labels: [
       "Happy",
@@ -316,7 +332,15 @@ function renderSecondChart(Arr) {
     datasets: [
       {
         label: "",
-        data: [Arr[0], Arr[1], Arr[2], Arr[3], Arr[4], Arr[5], Arr[6]],
+        data: [
+          obj["Happy"],
+          obj["Sad"],
+          obj["Angry"],
+          obj["Surprised"],
+          obj["Bad"],
+          obj["Fearful"],
+          obj["Disgusted"],
+        ],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(255, 159, 64, 0.2)",
@@ -354,6 +378,5 @@ function renderSecondChart(Arr) {
 
   const myChart = new Chart(document.getElementById("mySecondChart"), config);
 }
-incrementChart("Angry");
 
 var postContainer = document.getElementById("posts");
