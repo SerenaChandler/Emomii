@@ -242,6 +242,7 @@ const getPostdata = async () => {
       return response.json();
     })
     .then(function (data) {
+      console.log(data)
       var emotions = {};
 
       for (i = 0; i < data.length; i++) {
@@ -331,7 +332,7 @@ function renderSecondChart(obj) {
 
     datasets: [
       {
-        label: "",
+        label: "moods",
         data: [
           obj["Happy"],
           obj["Sad"],
