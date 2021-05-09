@@ -92,7 +92,7 @@ function populategrandchildren(childfeelings, grandchildfeelings) {
     var optionArray = ["|", "free|Free", "joyful|Joyful"];
   } else if (childfeelings.value == "interested") {
     var optionArray = ["|", "curious|Curious", "inquisitive|Inquisitive"];
-  } else if (childfeelings.value == "Proud") {
+  } else if (childfeelings.value == "proud") {
     var optionArray = ["|", "sucessful|Sucessful", "confident|Confident"];
   } else if (childfeelings.value == "accepted") {
     var optionArray = ["|", "respected|Respected", "valued|Valued"];
@@ -296,13 +296,13 @@ function renderChart(obj) {
           obj["Disgusted"],
         ],
         backgroundColor: [
-          "rgb(255, 205, 132)",
-          "rgb(54, 162, 235)",
-          "rgb(255, 25, 86)",
-          "rgb(255,2,255)",
-          "rgb(54, 121, 243)",
-          "rgb(25, 250, 69)",
-          "rgb(55,25,5)",
+          "rgb(245, 175, 153)",
+          "rgb(77, 107, 126)",
+          "rgb(224, 130, 131)",
+          "rgb(93, 85, 104)",
+          "rgb(107, 128, 155)",
+          "rgb(181, 196, 193)",
+          "rgb(116, 118, 135)",
         ],
         hoverOffset: 4,
       },
