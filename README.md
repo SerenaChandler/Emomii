@@ -9,6 +9,7 @@
 5. [License](#license)
 6. [Screenshot](#screenshot)
 7. [Questions](#questions)
+7. [Links](#links)
     
 <a name="description"></a>
 ## Description
@@ -49,7 +50,7 @@ then we have a simple form requesting that the user enter in their email and pas
 ### Dashboard:
 Once the user has logged in they are taken to their dashboard where they can start adding entries to their moodtracker. ![Screenshot](screenshot.png)
 
-for reference we used this feelings wheel chart to help us interpret feelings and moods into for which we called parentfeelings, childfeelings, and grandchildfeelings. 
+for reference we used this feelings wheel chart to help us interpret feelings and moods into classes for which we called parentfeelings, childfeelings, and grandchildfeelings. 
 ![feelingswheel](feelingswheel.jpg)
 The way that whis wheel works is based on an understanding that most feelings come from 7 "parent feelings" and from the parent feelings, we have a subclass of feelings for which we called child feelings, and the child feelings had another subclass for which we called grandchild feelings. 
 
@@ -210,4 +211,22 @@ This project is currently open source so feel free to for the repository and mak
 <a name="questions"></a>
 ## Questions
 Feel free to check out our [GitHub](https://github.com/SerenaChandler/Project2) repository. Also feel free to send us an email at <patrickly72@gmail.com>, <serenachandler2019@gmail.com>, or <erickmeline@gmail.com> if you have any questions
+
+
+<a name="links"></a>
+## Links
+1. Our deployed application 
+[https://emomii.herokuapp.com](https://emomii.herokuapp.com)
+
+2. our github repository<br>
+[https://github.com/SerenaChandler/Project2](https://github.com/SerenaChandler/Project2)
+
+3. Serena's Github<br>
+https://github.com/SerenaChandler/
+
+4. Erick' Github<br>
+https://github.com/erickmeline
+
+5. Patrick's Github<br>
+https://github.com/pattymcpat
 
