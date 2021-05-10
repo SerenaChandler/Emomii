@@ -61,6 +61,11 @@ if (signupbuttonEl) {
   signupbuttonEl.addEventListener('submit', signupFormHandler)
 }
 
+const logoutEl = document.querySelector('#logout');
+if (logoutEl) {
+  logoutEl.addEventListener('click', signOut);
+}
+
 
 // *** Google login *** //
 // Render Google Sign-in button
@@ -118,7 +123,7 @@ const signOut = async () => {
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
