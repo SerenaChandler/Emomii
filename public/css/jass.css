@@ -508,7 +508,14 @@ p {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
 }
-
+.date {
+  font-size: 1.75rem;
+  font-family: 'Lato', sans-serif;
+  color: black;
+  text-align: center;
+  font-weight: 300;  
+  text-decoration: wavy;
+}
 .question {
   font-size: 2rem;
   margin: 0 0 1rem;

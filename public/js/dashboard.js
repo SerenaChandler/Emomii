@@ -83,7 +83,6 @@ function populatechildren(parentfeelings, childfeelings) {
 }
 
 function populategrandchildren(childfeelings, grandchildfeelings) {
-  console.log("this is a function", grandchildfeelings);
   grandchildfeelings.innerHTML = "";
   if (childfeelings.value == "playful") {
     var optionArray = ["|", "aroused|Aroused", "cheeky|Cheeky"];
@@ -177,7 +176,7 @@ function populategrandchildren(childfeelings, grandchildfeelings) {
   } else if (childfeelings.value == "threatened") {
     var optionArray = ["|", "nervous|Nervous", "exposed|Exposed"];
   } else if (childfeelings.value == "disapproving") {
-    var optionArray = ["|", "judgemental|Judgemental", "humiliated|Humiliated"];
+    var optionArray = ["|", "judgemental|Judgemental", "embarassed|Embarassed"];
   } else if (childfeelings.value == "disenchanted") {
     var optionArray = ["|", "appaled|Appaled", "revolted|Revolted"];
   } else if (childfeelings.value == "awful") {
@@ -247,7 +246,7 @@ const getPostdata = async () => {
 
       for (i = 0; i < data.length; i++) {
         var emotion = data[i].parentMood;
-
+console.log ("this is the emotions:"+emotion)
         if (emotion in emotions) {
           emotions[emotion]++;
         } else {
