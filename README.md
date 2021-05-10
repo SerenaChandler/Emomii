@@ -14,7 +14,7 @@
 ## Description
 A Daily mood tracker and journal to help users identify patterns that can point them toward lifestyle or behavioral improvements and help them become more emotionally intelligent
 
-### How we made this
+### How we made this project
 ### Landing Page:
 <br>![Screenshot](screenshot2.png)
 For the landing page, the user is greeted with the proper greeting based on the time of day. 
